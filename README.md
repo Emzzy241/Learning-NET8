@@ -8,7 +8,7 @@
 * Git
 
 ## Description
-_Learning new features and methods in .NET8. Learning functionalities like the DateOnly structure, TimeOnly structure_
+_Learning new features and methods in .NET8. Learning functionalities like the DateOnly, TimeOnly structure, TimeOnly structure_
 
 ## Detected Bugs/Issues
 _No known bugs_
