@@ -1,4 +1,5 @@
 using System;
+using System.Globalization; // For importing the CultureInfo object type which returns type System.Globalization.Calendar
 
 namespace Learning;
 public class Progam
@@ -57,7 +58,24 @@ public class Progam
         Console.WriteLine();
         Console.WriteLine($"Last moth from today was: {lastMonth}");
 
-        
+        Console.WriteLine();
+        Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
+        Console.WriteLine();
+
+        var newDate = DateOnly.ParseExact("21 Oct 2015", "dd MMM yyyy", CultureInfo.InvariantCulture);
+            // Custom format
+        var newDate2 = DateOnly.Parse("October 21, 2015", CultureInfo.InvariantCulture);
+        // DateOnly
+        // can be compared with other instances. For example, you can check if a date isbefore or after another, or if a date today matches a specific date.
+        Console.WriteLine(newDate.ToString("m", CultureInfo.InvariantCulture));
+        // Month day pattern
+        Console.WriteLine(newDate2.ToString("o", CultureInfo.InvariantCulture));
+        // ISO 8601 format
+        Console.WriteLine(newDate2.ToLongDateString());
+
+        // All calendars in .NET derive from the System.Globalization.Calendar class, which provides 
+        // the base calendar implementation. One of the classes that inherits from the Calendar class is the EastAsianLunisolarCalendar class, which is the base class for all lunisolarcalendars.
+
 
 
     }    
