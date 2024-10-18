@@ -2,7 +2,7 @@ using System;
 using System.Globalization; // For importing the CultureInfo object type which returns type System.Globalization.Calendar
 
 namespace Learning;
-public class Progam
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -45,6 +45,8 @@ public class Progam
         var decadeLater = todaysDate.AddYears(10);
         var lastMonth = todaysDate.AddMonths(-1);
 
+        var dateInWords = todaysDate.ToLongDateString(); 
+
         
 
 
@@ -52,11 +54,14 @@ public class Progam
         // Printing them out 
         Console.WriteLine($"Today's date is: {todaysDate}");
         Console.WriteLine();
+        Console.WriteLine($"Today's date in full: {dateInWords}");
+        Console.WriteLine();
         Console.WriteLine($"Previous day date is: {previousDayDate}");
         Console.WriteLine();
         Console.WriteLine($"A decade later from today is: {decadeLater}");
         Console.WriteLine();
-        Console.WriteLine($"Last moth from today was: {lastMonth}");
+        Console.WriteLine($"Last month from today was: {lastMonth}");
+        Console.WriteLine();
 
         Console.WriteLine();
         Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
@@ -76,7 +81,25 @@ public class Progam
         // All calendars in .NET derive from the System.Globalization.Calendar class, which provides 
         // the base calendar implementation. One of the classes that inherits from the Calendar class is the EastAsianLunisolarCalendar class, which is the base class for all lunisolarcalendars.
 
+        Console.WriteLine();
+        Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
+        Console.WriteLine();
 
+        var comDate = DateOnly.ParseExact("21 Oct 2015", "dd MMM yyyy", CultureInfo.InvariantCulture); // Custom format
+        var comDate2 = DateOnly.Parse("October 21, 2015", CultureInfo.InvariantCulture);
+
+        var dateLater = comDate.AddMonths(6); // add 6 months to date
+
+        var dateBefore = comDate.AddDays(-10); // remove 10 days from date
+
+        Console.WriteLine($"Consider {comDate} ..."); // considering the custom date
+
+        Console.WriteLine($" Is ' {nameof(comDate2)}' equal? {comDate == comDate2}"); // using either Parse() or ParseExact() should yield the same RESULT
+        Console.WriteLine($" Is {dateLater} after? {dateLater > comDate}");
+        Console.WriteLine($" Is {dateLater} before? {dateLater < comDate}");
+
+        Console.WriteLine($" Is {dateBefore } after? {dateBefore > comDate} ");
+        Console.WriteLine($" Is {dateBefore } before? {dateBefore < comDate} ");
 
     }    
 }
