@@ -23,6 +23,40 @@ public class Progam
 
         Console.WriteLine($"Today is {today}"); // using the DateOnly.FromDateTime() to Print out today's date
 
+        Console.WriteLine();
+        Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
+        Console.WriteLine();
+
+        // Methods to adjust a DateOnly structure
+        /*
+            There are three methods used to adjust a DateOnly structure: AddDays(), AddMonths(), AddYears()
+            Each method takes an integer parameter, and increases the date by that measurement.
+            If a negative number is provided, the date is decreased by that measurement. 
+            The methods return a new instance of DateOnly, as the structure is immutable
+        */
+
+        var theDate = new DateOnly(2024, 10, 18); //Yy/Mm/Dd --- HOW TO CREATE A new DateOnly object
+        // or call on DateOnly.FromDateTime(DateTime.Now) to generate the actual date
+
+        var todaysDate = DateOnly.FromDateTime(DateTime.Now);
+        var theNextDay = todaysDate.AddDays(1);
+        var previousDayDate = todaysDate.AddDays(-1);
+        var decadeLater = todaysDate.AddYears(10);
+        var lastMonth = todaysDate.AddMonths(-1);
+
+        
+
+
+
+        // Printing them out 
+        Console.WriteLine($"Today's date is: {todaysDate}");
+        Console.WriteLine();
+        Console.WriteLine($"Previous day date is: {previousDayDate}");
+        Console.WriteLine();
+        Console.WriteLine($"A decade later from today is: {decadeLater}");
+        Console.WriteLine();
+        Console.WriteLine($"Last moth from today was: {lastMonth}");
+
         
 
 
