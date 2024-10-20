@@ -6,7 +6,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hey there ;)");
+        Console.WriteLine("Hey there, lets learn about date's ;)");
 
         /*
         var hebrewCalendar = new System.Globalization.HebrewCalendar();
