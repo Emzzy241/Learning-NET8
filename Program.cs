@@ -6,6 +6,8 @@ public class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("Hey there, lets learn about Lists ;)");
+        Console.WriteLine();
+        Console.WriteLine("We will be writing a program that takes in multiple lists, sorts and merge those lists");
 
         Console.WriteLine();
         Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
