@@ -17,12 +17,16 @@ public class Program
         // string 
 
         // Defining the 2 inputs for my algorithm
-        List<int> firstList = new List<int>(){ 1, 2, 3};
-        var secondList = new List<int>{4, 5, 6};
+        List<int> firstList = new List<int>(){ 3, 2, 1};
+        var secondList = new List<int>{5, 6, 4};
+
+        // Sorting the input lists
+        firstList.Sort();
+        secondList.Sort();
 
         // Linking the 2 lists
 
-        List<int> mergedList = new List<int>(){}; // instantiating an empty list
+        List<int> mergedList = new List<int>(){}; // instantiating an empty list for merging input lists.
         foreach (var item in firstList)
         {
             mergedList.Add(item);
@@ -32,7 +36,7 @@ public class Program
         {
             mergedList.Add(item);
         }
-        
+
         Console.WriteLine();
         Console.WriteLine();
 
