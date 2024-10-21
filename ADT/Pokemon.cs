@@ -32,7 +32,12 @@ public class Pokemon
     // Representations of data(properties) and you have functions acting on that data, Functions like .Clear()
 
     // A class is where we house all of our data in logical places and we do that because we want to know where our properties are
-    
 
+    // Once again, Remember that Abstract data types(ADT) are just classes that allows us to be able to:
+    // Represent data(with properties), and act or operate on that data(with methods)
+    // Examples of ADT could be a Stack, Queue, List<T>, LinkedList
+
+
+    // First lesson on DSA has been completed, Up next is Big O-Notation
     
 }
