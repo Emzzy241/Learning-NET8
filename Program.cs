@@ -1,58 +1,44 @@
 using System;
+using System.Collections; // For importing the ArrayList object
 using System.Collections.Generic; // For importing the List<T> object
+using System.Diagnostics;
 namespace Learning;
 public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hey there, lets learn about Lists ;)");
+        // Page 835 on the Microsoft dotnet documentation, topic: Generic types overview
+        Console.WriteLine("Hey there, lets learn Generics ;)");
         Console.WriteLine();
-        Console.WriteLine("We will be writing a program that takes in multiple lists, sorts and merge those lists");
-
-        Console.WriteLine();
-        Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
-        Console.WriteLine();
-        // Console.WriteLine("Enter 2 lists and I will merge them together");
-        // Console.WriteLine();
-
-        // Console.WriteLine("Enter the first list");
-        // string 
-
-        // Defining the 2 inputs for my algorithm
-        List<int> firstList = new List<int>(){ 3, 2, 1};
-        var secondList = new List<int>{5, 6, 4};
-
-        // Sorting the input lists
-        firstList.Sort();
-        secondList.Sort();
-
-        // Linking the 2 lists
-
-        List<int> mergedList = new List<int>(){}; // instantiating an empty list for merging input lists.
-        foreach (var item in firstList)
-        {
-            mergedList.Add(item);
-        }
-
-        foreach (var item in secondList)
-        {
-            mergedList.Add(item);
-        }
-
-        Console.WriteLine();
-        Console.WriteLine();
-
-        foreach (var item in mergedList)
-        {
-            Console.WriteLine(item);
-        }
+        Console.WriteLine("We will be writing a program that shows the differences between a generic and a non-generic list");
 
         Console.WriteLine();
         Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
         Console.WriteLine();
+       
 
-        // Learning LinkedList
-        // System.Collections.Generic.LinkedList<T>.Enumerator
+        // generic list
+       List<int> ListGeneric = new List<int> {5, 9, 1, 4};
+       
+       // non-generic list
+       ArrayList ListNonGeneric = new ArrayList {5, 9, 1, 4};
+
+        // calculating the time it takes to sort both a generic and a non-generic list
+        // timer for Generic Sort
+        Stopwatch s = Stopwatch.StartNew();
+        ListGeneric.Sort();
+        s.Stop();
+
+        Console.WriteLine($"Generic  Sort: {ListGeneric} \n Time taken {s.Elapsed.TotalMilliseconds}ms");
+
+        // timer for non-generic Sort
+        Stopwatch s2 = Stopwatch.StartNew();
+        ListNonGeneric.Sort();
+        s2.Stop();
+        Console.WriteLine($"Non-Generic Sort: {ListNonGeneric} \n Time taken {s2.Elapsed.TotalMilliseconds}ms");
+        Console.WriteLine();
+
+
 
         
 
