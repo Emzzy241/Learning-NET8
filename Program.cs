@@ -47,6 +47,14 @@ public class Program
             Console.WriteLine(item);
         }
 
+        Console.WriteLine();
+        Console.WriteLine("---------------  LEARNING SOMETHING NEW  -------------------");
+        Console.WriteLine();
+
+        // Learning LinkedList
+        // System.Collections.Generic.LinkedList<T>.Enumerator
+
+        
 
 
 
