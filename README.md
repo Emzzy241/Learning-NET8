@@ -8,7 +8,46 @@
 * Git
 
 ## Description
-_Learning new features and methods in .NET8. Learning functionalities like the DateOnly, TimeOnly structure, TimeOnly structure_
+_Learning new features and methods in .NET8. Learning functionalities like the DateOnly, TimeOnly objects,Cryptography, encryption, digital signatures and much more._
+
+
+## Setup/Installation
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+
+### Run Locally
+
+To run **the project** locally, run this command on your git bash:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/Emzzy241/Learning-NET8.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/Emzzy241/Learning-NET8.git
+```
+
+* I have organized these concepts into multiple branches, Clone the repo to your local machine and checkout the multiple branches.
+
+* To check the list of branch
+```
+    git branch
+```
+
+
+* TO checkout into a specific branch:
+```
+    git checkout Enter_branch_Name
+```
+
 
 ## Detected Bugs/Issues
 _No known bugs_
