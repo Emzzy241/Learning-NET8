@@ -6,6 +6,8 @@
 * .NET8
 * C#
 * Git
+* Node v18.10.0
+* Javascript
 
 ## Description
 _Learning new features and methods in .NET8. Learning functionalities like the DateOnly, TimeOnly objects,Cryptography, encryption, digital signatures and much more._
